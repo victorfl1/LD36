@@ -94,6 +94,9 @@
         </object-type>
         <object-type name="rotate" sid="6168686018954126">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="9019225410085008" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Rotate" sid="5747243124379112">
                     <behavior id="Rotate" />
@@ -104,7 +107,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4374110820771961" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="top" x="0.5" y="0" />
+                        <image-point name="right" x="1" y="0.5" />
+                        <image-point name="down" x="0.5" y="1" />
+                        <image-point name="left" x="0" y="0.5" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -124,6 +132,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ColliderJump" sid="8741974354712491">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Side" sid="1740383526758409" type="string" />
+                <instance-variable name="ID" sid="5482416704526057" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8980590191466688" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -132,6 +152,7 @@
     <event-folder>
         <event-sheet>Main Game.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>Jumper.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
