@@ -84,6 +84,97 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3315366042045666" title="ColliderPos" />
+        <event-group description="" sid="3315366042045666" title="ColliderPos">
+            <sub-events>
+                <event-block sid="1831320157443648">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9963585290865755" type="System">
+                            <param id="0" name="Object">rotate</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="524389184142932" type="System">
+                            <param id="0" name="Object">ColliderJump</param>
+                            <param id="1" name="Expression">ColliderJump.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">rotate.ID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4629141298802139">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3294959862474467" type="ColliderJump">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;top&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="9387610090181727" type="ColliderJump">
+                                    <param id="0" name="Angle">rotate.Angle+270</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="7725033765722652" type="ColliderJump">
+                                    <param id="0" name="Object">rotate</param>
+                                    <param id="1" name="Image point (optional)">&quot;top&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8818641084349795">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1111256834162828" type="ColliderJump">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="2720587438963614" type="ColliderJump">
+                                    <param id="0" name="Angle">rotate.Angle</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="1384820925395935" type="ColliderJump">
+                                    <param id="0" name="Object">rotate</param>
+                                    <param id="1" name="Image point (optional)">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="214912320748077">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4841771564591681" type="ColliderJump">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="2512884539434205" type="ColliderJump">
+                                    <param id="0" name="Angle">rotate.Angle+90</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="9428095907146522" type="ColliderJump">
+                                    <param id="0" name="Object">rotate</param>
+                                    <param id="1" name="Image point (optional)">&quot;down&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7203701824467538">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5784457851769293" type="ColliderJump">
+                                    <param id="0" name="Instance variable">Side</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="5104820632492849" type="ColliderJump">
+                                    <param id="0" name="Angle">rotate.Angle+180</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="6608453084824571" type="ColliderJump">
+                                    <param id="0" name="Object">rotate</param>
+                                    <param id="1" name="Image point (optional)">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
