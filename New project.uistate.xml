@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet order="1">Player 1</event-sheet>
-        <event-sheet order="2">Player 2</event-sheet>
-        <event-sheet order="3">Functions</event-sheet>
-        <event-sheet active="1" order="4">Camera</event-sheet>
-        <event-sheet order="5">Main Game</event-sheet>
+        <layout order="1">Layout 1</layout>
+        <event-sheet order="2">Player 1</event-sheet>
+        <event-sheet order="3">Player 2</event-sheet>
+        <event-sheet active="1" order="4">Functions</event-sheet>
+        <event-sheet order="5">Camera</event-sheet>
+        <event-sheet order="6">Main Game</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="object-folder/Player/" />
         <folder expanded="1" path="object-folder/Colliders/" />
         <folder expanded="1" path="layout-folder/" />
@@ -41,5 +41,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/colCamera/" />
         <folder expanded="1" path="animation-folder/colDoor/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/objBlock/" />
     </folders-expanded>
 </c2uistate>
