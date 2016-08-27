@@ -26,12 +26,29 @@
                                     <param id="1" name="Button index">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="443202157476822" type="Function">
-                                    <param id="0" name="Name">&quot;p1action&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="129848964174365">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8451533179177038" type="player1">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;walking&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6247184658712048" type="player1">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;standing&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="443202157476822" type="Function">
+                                            <param id="0" name="Name">&quot;p1action&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
