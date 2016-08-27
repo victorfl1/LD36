@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main Game</name>
     <events>
+        <variable constant="0" name="cameraX" sid="9691136974113349" static="0" type="number">176</variable>
+        <variable constant="0" name="cameraY" sid="5780863568418308" static="0" type="number">112</variable>
+        <include>Camera</include>
         <include>Player 2</include>
         <include>Player 1</include>
         <include>Functions</include>

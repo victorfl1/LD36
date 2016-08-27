@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Camera</name>
+    <events>
+        <event-block sid="4477242178853446">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2275210931308538" type="player1">
+                    <param id="0" name="Object">colDoor</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="8093784012591824" type="player1">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="2718564699910384" type="colCamera">
+                    <param id="0" name="Instance variable">isMoving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6845156584640304" type="System">
+                    <param id="0" name="Variable">cameraX</param>
+                    <param id="1" name="Value">colCamera.X+176</param>
+                </action>
+                <action id="0" name="Call function" sid="3480940736992809" type="Function">
+                    <param id="0" name="Name">&quot;MoveCamera&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4314287912283163">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="4001352745780653" type="colCamera">
+                    <param id="0" name="Instance variable">isMoving</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="8121665611004301" type="colCamera">
+                    <param id="0" name="X">lerp(colCamera.X,cameraX, 0.01)</param>
+                    <param id="1" name="Y">lerp(colCamera.Y, cameraY, 0.01)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

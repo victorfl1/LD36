@@ -151,5 +151,17 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="4600930624296824" title="MoveCamera">
+            <sub-events>
+                <event-block sid="6641434462505118">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6240288019575543" type="Function">
+                            <param id="0" name="Name">&quot;MoveCamera&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
