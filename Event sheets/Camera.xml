@@ -8,9 +8,8 @@
                 <condition id="0" name="On collision with another object" sid="2275210931308538" type="player1">
                     <param id="0" name="Object">colDoor</param>
                 </condition>
-                <condition id="-1" name="Compare X" sid="8093784012591824" type="player1">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                <condition id="-8" name="Is boolean instance variable set" sid="8147967981886913" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
                 </condition>
             </conditions>
             <actions>
@@ -18,26 +17,146 @@
                     <param id="0" name="Instance variable">isMoving</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="6845156584640304" type="System">
-                    <param id="0" name="Variable">cameraX</param>
-                    <param id="1" name="Value">colCamera.X+176</param>
+                <action id="-10" name="Set value" sid="3208712286300552" type="player1">
+                    <param id="0" name="Instance variable">movDir</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="2789718345481067" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="0" name="Call function" sid="3480940736992809" type="Function">
                     <param id="0" name="Name">&quot;MoveCamera&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-12" name="Set group active" sid="2772796333368388" type="System">
+                    <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4314287912283163">
             <conditions>
+                <condition disabled="1" id="-4" name="Trigger once while true" sid="6841091119404346" type="System" />
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="9791230196979636" type="player1">
+                    <param id="0" name="Object">colDoor</param>
+                </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="4001352745780653" type="colCamera">
                     <param id="0" name="Instance variable">isMoving</param>
                 </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6343493024811303" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5065857559099315" type="player1">
+                    <param id="0" name="Instance variable">movDir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="7723765031234709" type="player1">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="6845156584640304" type="System">
+                    <param id="0" name="Variable">cameraX</param>
+                    <param id="1" name="Value">colCamera.X+176</param>
+                </action>
                 <action id="-3" name="Set position" sid="8121665611004301" type="colCamera">
                     <param id="0" name="X">lerp(colCamera.X,cameraX, 0.01)</param>
-                    <param id="1" name="Y">lerp(colCamera.Y, cameraY, 0.01)</param>
+                    <param id="1" name="Y">lerp(colCamera.Y, colCamera.Y, 0.01)</param>
+                </action>
+                <action id="-1" name="Set X" sid="6431914021670078" type="player1">
+                    <param id="0" name="X">lerp(player1.X, colDoor.X+48,0.01)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4401546281109177">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="8373865141439955" type="colCamera">
+                    <param id="0" name="Instance variable">isMoving</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3722542606032211" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5113062105970735" type="player1">
+                    <param id="0" name="Instance variable">movDir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition disabled="1" id="-1" name="Compare X" sid="5947857567712866" type="player1">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8277040902085151" type="System">
+                    <param id="0" name="Variable">cameraX</param>
+                    <param id="1" name="Value">colCamera.X-176</param>
+                </action>
+                <action id="-3" name="Set position" sid="3094078159328481" type="colCamera">
+                    <param id="0" name="X">lerp(colCamera.X,-cameraX, 0.01)</param>
+                    <param id="1" name="Y">lerp(colCamera.Y, colCamera.Y, 0.01)</param>
+                </action>
+                <action id="-1" name="Set X" sid="9390096065325366" type="player1">
+                    <param id="0" name="X">lerp(player1.X, colDoor.X-80,0.01)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7560040349589698">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3133008289181379" type="player1">
+                    <param id="0" name="Object">colDoor</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3773411501130981" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="2838391967280418" type="player1">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block disabled="1" sid="1767859587695803">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4349568648644797" type="player1">
+                    <param id="0" name="Object">colDoor</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8705735456876756" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="6495521298068823" type="player1">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">colDoor.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6199136981258016" type="player1">
+                    <param id="0" name="Instance variable">movDir</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7379760978718967">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="5088993707874256" type="colCamera">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">cameraX</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="5116627039150227" type="System">
+                    <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8485804461628257" type="player1">
+                    <param id="0" name="Instance variable">isActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="2754976912772695" type="player1">
+                    <param id="0" name="Instance variable">movDir</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
