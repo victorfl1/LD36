@@ -200,6 +200,127 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="8947267618690173" title="P2 Push">
+            <sub-events>
+                <event-block sid="3370934323262864">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1098859812761404" type="Function">
+                            <param id="0" name="Name">&quot;p2action&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="595488179153038" type="System">
+                            <param id="0" name="First value">distance(player2.X,player2.Y,objBlock.X,objBlock.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">objBlock.Width+2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4089049399582185">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="6033087913900357" type="player2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">objBlock.Y-(objBlock.Height/2)</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="8988419025552789" type="player2">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">objBlock.Y+(objBlock.Height/2)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5196232814348757">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="38743436291849" type="player2">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="7709186182493133" type="player2">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">objBlock.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="2926339902106972" type="objBlock">
+                                            <param id="0" name="Vector X">300</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5116618159346805">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8220465844259439" type="player2">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="3389420666723521" type="player2">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">objBlock.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="7773780647387912" type="objBlock">
+                                            <param id="0" name="Vector X">-300</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7158118560296325">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="5873193873268836" type="player2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">objBlock.X-(objBlock.Width/2)</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="5917050673156507" type="player2">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">objBlock.X+(objBlock.Width/2)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3923964834394974">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2405954189477666" type="player2">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;up&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="2610059897539107" type="player2">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">objBlock.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="6036999358276019" type="objBlock">
+                                            <param id="0" name="Vector Y">-300</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4826250633994855">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3251326580855131" type="player2">
+                                            <param id="0" name="Instance variable">side</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;down&quot;</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="6883989874667481" type="player2">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">objBlock.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="4411932268181578" type="objBlock">
+                                            <param id="0" name="Vector Y">300</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="4600930624296824" title="MoveCamera">
             <sub-events>
                 <event-block sid="6641434462505118">

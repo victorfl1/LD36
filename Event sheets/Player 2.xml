@@ -15,10 +15,48 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="" sid="9128640963596349" title="Action P2">
+                    <sub-events>
+                        <event-block any="1" sid="6547235551934152">
+                            <conditions>
+                                <condition id="11" name="On button index pressed" sid="8851877990495828" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Button index">0</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="5766807837379651" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="28135144129664">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2558390266398111" type="player2">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;walking&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="7206941264705285" type="player2">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;standing&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2532181224769166" type="Function">
+                                            <param id="0" name="Name">&quot;p2action&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="9910073769938077" title="Movement P2">
                     <sub-events>
                         <comment>X</comment>
-                        <event-block sid="1738410707747322">
+                        <event-block any="1" sid="1738410707747322">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="6591637159147853" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
@@ -26,14 +64,21 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">radiusController</param>
                                 </condition>
+                                <condition id="2" name="Key is down" sid="4037872359036166" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="1433672376045899" type="player2">
                                     <param id="0" name="Control">1</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="5270637625426996" type="player2">
+                                    <param id="0" name="Instance variable">side</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2857714384733942">
+                        <event-block any="1" sid="2857714384733942">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="1882759652182502" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
@@ -41,15 +86,22 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-radiusController</param>
                                 </condition>
+                                <condition id="2" name="Key is down" sid="171064191071127" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="6509985321632428" type="player2">
                                     <param id="0" name="Control">0</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="3913004855370657" type="player2">
+                                    <param id="0" name="Instance variable">side</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Y</comment>
-                        <event-block sid="7561296614833085">
+                        <event-block any="1" sid="7561296614833085">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="7230652749815504" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
@@ -57,14 +109,21 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">radiusController</param>
                                 </condition>
+                                <condition id="2" name="Key is down" sid="1362628985985426" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="6221366723864201" type="player2">
                                     <param id="0" name="Control">3</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="8869339172097434" type="player2">
+                                    <param id="0" name="Instance variable">side</param>
+                                    <param id="1" name="Value">&quot;down&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1948393965746653">
+                        <event-block any="1" sid="1948393965746653">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="7107928225852066" type="Gamepad">
                                     <param id="0" name="Gamepad">1</param>
@@ -72,10 +131,17 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-radiusController</param>
                                 </condition>
+                                <condition id="2" name="Key is down" sid="4967987307318522" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="5385090248886978" type="player2">
                                     <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4721863700163208" type="player2">
+                                    <param id="0" name="Instance variable">side</param>
+                                    <param id="1" name="Value">&quot;up&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -105,6 +171,10 @@
                             <param id="0" name="Animation">&quot;Standing&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="203959029373503" type="player2">
+                            <param id="0" name="Instance variable">state</param>
+                            <param id="1" name="Value">&quot;standing&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2591515967085666">
@@ -115,6 +185,10 @@
                         <action id="4" name="Set animation" sid="2123588863828116" type="p2animation">
                             <param id="0" name="Animation">&quot;Walking&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8647657101353766" type="player2">
+                            <param id="0" name="Instance variable">state</param>
+                            <param id="1" name="Value">&quot;walking&quot;</param>
                         </action>
                     </actions>
                 </event-block>
