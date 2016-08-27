@@ -10,6 +10,11 @@
                         <condition id="0" name="On function" sid="6072572537423224" type="Function">
                             <param id="0" name="Name">&quot;p1action&quot;</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9296505372578181" type="player1">
+                            <param id="0" name="Instance variable">dash_timer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -31,6 +36,10 @@
                                 <action id="-12" name="Set group active" sid="7833243556689703" type="System">
                                     <param id="0" name="Group name">&quot;Movement P1&quot;</param>
                                     <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="7375086453479726" type="System">
+                                    <param id="0" name="Group name">&quot;DashTimer&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="7469068521461804" type="System">
                                     <param id="0" name="Seconds">0.6</param>
@@ -63,6 +72,10 @@
                                     <param id="0" name="Group name">&quot;Movement P1&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="18865205957816" type="System">
+                                    <param id="0" name="Group name">&quot;DashTimer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="6701905791788697" type="System">
                                     <param id="0" name="Seconds">0.6</param>
                                 </action>
@@ -93,6 +106,10 @@
                                 <action id="-12" name="Set group active" sid="6932577548528377" type="System">
                                     <param id="0" name="Group name">&quot;Movement P1&quot;</param>
                                     <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="4538616009061096" type="System">
+                                    <param id="0" name="Group name">&quot;DashTimer&quot;</param>
+                                    <param id="1" name="State">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="3310137438300174" type="System">
                                     <param id="0" name="Seconds">0.6</param>
@@ -125,6 +142,10 @@
                                     <param id="0" name="Group name">&quot;Movement P1&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-12" name="Set group active" sid="5707884628754972" type="System">
+                                    <param id="0" name="Group name">&quot;DashTimer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="5858935022106377" type="System">
                                     <param id="0" name="Seconds">0.6</param>
                                 </action>
@@ -139,16 +160,44 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3743527356933068">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9607131335531445" type="player1">
-                            <param id="0" name="Instance variable">state</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;dash&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
+                <event-group description="" inactive="1" sid="2263806116642587" title="DashTimer">
+                    <sub-events>
+                        <event-block sid="3743527356933068">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5115930926103556" type="player1">
+                                    <param id="0" name="Instance variable">dash_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="5724842615783771" type="player1">
+                                    <param id="0" name="Instance variable">dash_timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="679271221734689">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4720455914285763" type="player1">
+                                    <param id="0" name="Instance variable">dash_timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8708877588286447" type="player1">
+                                    <param id="0" name="Instance variable">dash_timer</param>
+                                    <param id="1" name="Value">60</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="3172381886809613" type="System">
+                                    <param id="0" name="Group name">&quot;DashTimer&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="4600930624296824" title="MoveCamera">
