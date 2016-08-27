@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player 2</name>
+    <events>
+        <event-group description="" sid="9598928798636112" title="Controller P2">
+            <sub-events>
+                <event-block disabled="1" sid="4655098059753776">
+                    <conditions>
+                        <condition id="1" name="On gamepad connected" sid="8566930214550679" type="Gamepad" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="5857178891767802" type="player2">
+                            <param id="0" name="Angle">60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="9910073769938077" title="Movement P2">
+                    <sub-events>
+                        <comment>X</comment>
+                        <event-block sid="1738410707747322">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="6591637159147853" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">radiusController</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="1433672376045899" type="player2">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2857714384733942">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="1882759652182502" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-radiusController</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="6509985321632428" type="player2">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Y</comment>
+                        <event-block sid="7561296614833085">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="7230652749815504" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">radiusController</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="6221366723864201" type="player2">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1948393965746653">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="7107928225852066" type="Gamepad">
+                                    <param id="0" name="Gamepad">1</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-radiusController</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="5385090248886978" type="player2">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6583081476581611" title="Animation P2">
+            <sub-events>
+                <event-block sid="4964372800722564">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="101380122466848" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="2609123114131879" type="p2animation">
+                            <param id="0" name="Object">player2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5305171908085052">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="4356429277669081" type="player2" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2535215757897698" type="p2animation">
+                            <param id="0" name="Animation">&quot;Standing&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2591515967085666">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="6678179285047047" type="player2" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2123588863828116" type="p2animation">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

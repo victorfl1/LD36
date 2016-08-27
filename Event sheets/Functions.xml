@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Functions</name>
+    <events>
+        <event-block sid="3877354489745443">
+            <conditions>
+                <condition id="0" name="On function" sid="6072572537423224" type="Function">
+                    <param id="0" name="Name">&quot;p1action&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="543116712764361">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6996410588338299" type="player1">
+                            <param id="0" name="Instance variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="361100279370852" type="player1">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="1306096956966373" type="player1">
+                            <param id="0" name="Vector X">200</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7833243556689703" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7469068521461804" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="8356873558538611" type="player1">
+                            <param id="0" name="Max Speed">p1_speed</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5096559803691367" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3247358371611801">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2917645977019574" type="player1">
+                            <param id="0" name="Instance variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3768129783339367" type="player1">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="7782663222726224" type="player1">
+                            <param id="0" name="Vector X">-200</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2092088604190539" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6701905791788697" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3754972421758799" type="player1">
+                            <param id="0" name="Max Speed">p1_speed</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="3843377927767709" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7847062306642902">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7665666534891467" type="player1">
+                            <param id="0" name="Instance variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="6835764532844462" type="player1">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="1812774671396478" type="player1">
+                            <param id="0" name="Vector Y">-200</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="6932577548528377" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3310137438300174" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="7761666934621124" type="player1">
+                            <param id="0" name="Max Speed">p1_speed</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="8167611876465243" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3825921614843655">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="977234672742556" type="player1">
+                            <param id="0" name="Instance variable">side</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="3442138790406961" type="player1">
+                            <param id="0" name="Max Speed">200</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="5338319422369518" type="player1">
+                            <param id="0" name="Vector Y">200</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194660704669174" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5858935022106377" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="7840637046588509" type="player1">
+                            <param id="0" name="Max Speed">p1_speed</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="9863966891909425" type="System">
+                            <param id="0" name="Group name">&quot;Movement P1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -2,5 +2,19 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main Game</name>
-    <events />
+    <events>
+        <include>Player 2</include>
+        <include>Player 1</include>
+        <include>Functions</include>
+        <event-block sid="1779586440416066">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4740111424666628" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3626881059644157" type="Text">
+                    <param id="0" name="Text">Gamepad.LastButton(0)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
