@@ -89,8 +89,6 @@
                     <instance-variable name="side" sid="2915384239762746" type="string" />
                     <instance-variable name="state" sid="1278829388733229" type="string" />
                     <instance-variable name="dash_timer" sid="9036189372652486" type="number" />
-                    <instance-variable name="isActive" sid="8379195945303768" type="boolean" />
-                    <instance-variable name="movDir" sid="9055786992442806" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="6626878073123648">
@@ -105,10 +103,6 @@
             </object-type>
             <object-type name="player2" sid="6415002751874184">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="isActive" sid="7974105077457024" type="boolean" />
-                    <instance-variable name="movDir" sid="1078331491028934" type="number" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="6904608485202772">
                         <behavior id="EightDir" />
