@@ -61,6 +61,7 @@
                     <instance-variables>
                         <side></side>
                         <state></state>
+                        <dash_timer>60</dash_timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
