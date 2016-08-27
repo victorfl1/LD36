@@ -2,8 +2,5 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main Game</name>
-    <events>
-        <include>Player</include>
-        <include>Jumper</include>
-    </events>
+    <events />
 </c2eventsheet>
